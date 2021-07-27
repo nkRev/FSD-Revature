@@ -17,7 +17,7 @@ class BankB extends Bank{
 class BankC extends Bank{
     @Override
     public int getRateofInterest(){
-        return 9;
+        return 8;
     }
 }
 public class Demo10 {

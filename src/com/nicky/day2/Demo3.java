@@ -17,6 +17,6 @@ public class Demo3 {
         Calculator cal = new Calculator();
         cal.addNumber(20, 10);
 
-        Calculator.subtractNumber(20,10);
+        Calculator.subtractNumber(20, 10);
     }
 }

@@ -17,6 +17,7 @@ class Rectangle extends Shape {
     public void draw(){
         System.out.println("Rectangle drawing...");
     }
+    @Override
     public void getArea(){
         System.out.println("Area: "+(width*height));
     }
@@ -29,6 +30,7 @@ class Circle extends Shape{
     public void draw(){
         System.out.println("Circle drawing...");
     }
+    @Override
     public void getArea(){
         System.out.println("Area: "+(pi*(radius*radius)));
     }

@@ -1,5 +1,12 @@
 package com.nicky.day2;
-
+//without static count;
+//class Counter{
+//    int count =0;
+//    public Counter(){
+//        count++;//increment value
+//        System.out.println(count);
+//    }
+//}
 class Counter {
     static int count = 0; //with count being static, regardless of obj it will continue the counter in constructor
 

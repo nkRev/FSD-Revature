@@ -3,6 +3,7 @@ class Test{
 
 }
 public class Demo5 {
+    //static block will print before main method
     static{
         System.out.println("This is my static block");
     }

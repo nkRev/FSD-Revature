@@ -16,6 +16,9 @@ class Calculation{
         System.out.println("5th method");
     }
 }
+//public int test(){
+//    return 10;
+//}
 public class Demo8 {
     public static void main(String[] args) {
     Calculation cal = new Calculation();

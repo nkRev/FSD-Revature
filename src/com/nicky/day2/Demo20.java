@@ -10,52 +10,52 @@ interface IBankAccount {
 }
 
 class SavingsAccount implements IBankAccount {
-    private double balance;
-    private double perDayLimit;
+    private double _balance;
+    private double _perDayLimit;
 
     @Override
     public boolean deposit(double amount) {
-        balance += amount;
+        _balance += amount;
         return true;
     }
 
     @Override
     public boolean withdraw(double amount) {
-        if (balance < amount) {
+        if (_balance < amount) {
             System.out.println("Insufficient balance!");
             return false;
-        } else if (perDayLimit + amount > 5000) {
+        } else if (_perDayLimit + amount > 5000) {
             System.out.println("Daily withdraw limit has been exceeded");
             return false;
         } else {
             System.out.println(amount + " was withdrawn");
-            balance -= amount;
+            _balance -= amount;
             return true;
         }
     }
 
     @Override
     public void getBalance() {
-        System.out.println("Savings Account balance: "+balance);
+        System.out.println("Savings Account balance: "+_balance);
     }
 }
 
 class CurrentAccount implements IBankAccount {
-    private double balance;
+    private double _balance;
 
     @Override
     public boolean deposit(double amount) {
-        balance += amount;
+        _balance += amount;
         return true;
     }
 
     @Override
     public boolean withdraw(double amount) {
-        if (balance < amount) {
+        if (_balance < amount) {
             System.out.println("Insufficient balance!");
             return false;
         } else {
-            balance -= amount;
+            _balance -= amount;
             System.out.println(amount + " was withdrawn");
             return true;
         }
@@ -63,7 +63,7 @@ class CurrentAccount implements IBankAccount {
 
     @Override
     public void getBalance(){
-        System.out.println("Current Account balance: "+balance);
+        System.out.println("Current Account balance: "+_balance);
     }
 }
 
