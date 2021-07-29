@@ -1,6 +1,5 @@
 package com.nicky.day3;
 
-
 import java.io.FileOutputStream;
 import java.nio.charset.StandardCharsets;
 
