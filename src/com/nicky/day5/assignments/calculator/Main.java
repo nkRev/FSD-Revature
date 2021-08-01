@@ -60,8 +60,6 @@ public class Main {
                     System.out.println("Terminating....");
                     finished = true;
             }
-
-
         } while (!finished);
 
     }
