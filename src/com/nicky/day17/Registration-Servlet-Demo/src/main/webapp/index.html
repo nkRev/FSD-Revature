@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+input[type="register"], input[type="password"], input[type="email"],
+	label[type="username"], label[type="cpassword"] {
+	width: auto;
+	box-sizing: border-box;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+}
+
+label[for="register"], label[for="password"], label[for="email"], label[for="username"],
+	label[for="cpassword"], label[for="city"] {
+	margin-left: 4rem;
+	margin-right: 1rem;
+}
+
+/**************************** CSS CLASSES ****************************************************/
+.btn {
+	background-color: #2c67de;
+	color: #fff;
+	padding: 5px 1.9rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-right: 4rem;
+	border: 0rem;
+	border-radius: 1rem;
+}
+
+.form-group {
+	color: black;
+	text-align: right;
+	margin-right: 8rem;
+}
+
+.form-control {
+	margin-top: 1rem;
+}
+
+.register {
+	padding-top: 1rem;
+	padding-left: 10.5rem;
+	color: black;
+}
+
+.wrapper {
+	width: 30rem;
+	height: 24rem;
+	margin: 15rem auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	border-radius: 1rem;
+	box-shadow: 0.2rem 0.2rem 0.2rem 0.4rem;
+	color: rebeccapurple;
+}
+</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<h2 class="register">Registration form</h2>
+
+		<form name="userForm" method="post" action="register">
+			<div class="form-group">
+				<label for="username">Username</label> <input type="text"
+					class="form-control" name="user_name" id="username"
+					placeholder="Username" />
+			</div>
+
+			<div class="form-group">
+				<label for="email">E-mail</label> <input type="text"
+					class="form-control" name="user_email" id="email"
+					placeholder="E-mail" />
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"
+					class="form-control" name="user_password" id="password"
+					placeholder="Password" />
+			</div>
+			<div class="form-group" style="margin-right: 15.6rem; padding-bottom: 1rem;">
+				<label for="city">City</label> 
+				<select name="user_city">
+					<option value="PHL">PHL</option>
+					<option value="NYC">NYC</option>
+					<option value="PHX">PHX</option>
+				</select>
+			</div>
+
+			<div class="form-group" style="margin-right: 10.8rem; padding-bottom: 2rem;">
+				<label for="gender" >Gender</label> 
+				<input type="radio"
+					name="user_gender" value="male" /> Male &nbsp;&nbsp; <input
+					type="radio" name="user_gender" value="female" /> Female
+			</div>
+			<div class="form-group">
+				<input type="checkbox" value="accepted" name="agreement" /> Accept
+				Terms and Conditions <br> <input type="submit"
+					class="btn btn-primary" value="Submit" />
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>
