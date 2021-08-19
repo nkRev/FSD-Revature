@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<display-name>Session-Management-Demo</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- URLRewriting Servlet & Mapping -->
+	<servlet>
+		<servlet-name>URLRewritingServlet</servlet-name>
+		<servlet-class>com.nicky.URLRewritingServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>URLRewritingServlet</servlet-name>
+		<url-pattern>/URLRewritingServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- GetValueFromURLRewriting Servlet & Mapping -->
+	<servlet>
+		<servlet-name>GetValueFromURLRewritingServlet</servlet-name>
+		<servlet-class>com.nicky.GetValueFromURLRewritingServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetValueFromURLRewritingServlet</servlet-name>
+		<url-pattern>/GetValueFromURLRewritingServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- HiddenTextField Servlet & Mapping -->
+	<servlet>
+		<servlet-name>HiddenTextFieldServlet</servlet-name>
+		<servlet-class>com.nicky.HiddenTextFieldServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HiddenTextFieldServlet</servlet-name>
+		<url-pattern>/HiddenTextFieldServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- ViewHiddenForm Servlet & Mapping -->
+	<servlet>
+		<servlet-name>ViewHiddenForm</servlet-name>
+		<servlet-class>com.nicky.ViewHiddenForm</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ViewHiddenForm</servlet-name>
+		<url-pattern>/ViewHiddenForm</url-pattern>
+	</servlet-mapping>
+
+	<!--SendRedirect Servlet & mapping -->
+	<servlet>
+		<servlet-name>SendRedirectServlet</servlet-name>
+		<servlet-class>com.nicky.SendRedirectServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SendRedirectServlet</servlet-name>
+		<url-pattern>/SendRedirectServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!--GetValueFromHttpSession Servlet & Mapping-->
+	<servlet>
+		<servlet-name>GetValueFromHttpSession</servlet-name>
+		<servlet-class>com.nicky.GetValueFromHttpSession</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetValueFromHttpSession</servlet-name>
+		<url-pattern>/GetValueFromHttpSession</url-pattern>
+	</servlet-mapping>
+
+	<!--HttpSession Servlet & Mapping-->
+	<servlet>
+		<servlet-name>HttpSessionServlet</servlet-name>
+		<servlet-class>com.nicky.HttpSessionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HttpSessionServlet</servlet-name>
+		<url-pattern>/HttpSessionServlet</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

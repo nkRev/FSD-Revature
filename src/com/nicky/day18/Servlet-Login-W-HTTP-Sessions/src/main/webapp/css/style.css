@@ -1,0 +1,29 @@
+input[type="username"],
+input[type="password"]
+{
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  margin-left:  2rem;
+  border: 1px solid #ccc;
+}
+
+
+.login{
+    margin-left: 24rem;
+}
+.form-group{
+    margin-right: 25rem;
+}
+.wrapper{
+    width: 30rem;
+    height: 24rem;
+    margin: 10rem auto;
+    margin-left: 50rem;
+    left: 0;
+    right: 0;
+}
+
+
+.form-inline{
+    margin-top: 3rem;
+}
