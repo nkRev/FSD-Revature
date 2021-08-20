@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<display-name>Add-Remove-Employee</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- AddEmployee Servlet & Mapping -->
+	<servlet>
+		<servlet-name>AddEmployeeServlet</servlet-name>
+		<servlet-class>com.nicky.servlets.AddEmployeeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddEmployeeServlet</servlet-name>
+		<url-pattern>/addEmployee</url-pattern>
+	</servlet-mapping>
+
+<!-- GetAllEmployee Servlet & Mapping -->
+	<servlet>
+		<servlet-name>GetAllEmployeeServlet</servlet-name>
+		<servlet-class>com.nicky.servlets.GetAllEmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetAllEmployeeServlet</servlet-name>
+		<url-pattern>/getallemployees</url-pattern>
+	</servlet-mapping>
+
+
+<!-- viewemployee Servlet & Mapping -->
+	<servlet>
+		<servlet-name>viewemployee</servlet-name>
+		<servlet-class>com.nicky.servlets.ViewAnEmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>viewemployee</servlet-name>
+		<url-pattern>/viewemployee</url-pattern>
+	</servlet-mapping>
+
+<!-- UpdateConf Servlet & Mapping -->
+	<servlet>
+		<servlet-name>UpdateConfServlet</servlet-name>
+		<servlet-class>com.nicky.servlets.UpdateConfServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateConfServlet</servlet-name>
+		<url-pattern>/confeditemployee</url-pattern>
+	</servlet-mapping>
+
+<!-- editemployee Servlet & Mapping -->
+	<servlet>
+		<servlet-name>UpdateEmployeeServlet</servlet-name>
+		<servlet-class>com.nicky.servlets.UpdateEmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateEmployeeServlet</servlet-name>
+		<url-pattern>/editemployee</url-pattern>
+	</servlet-mapping>
+
+<!-- RmEmployee Servlet & Mapping -->
+	<servlet>
+		<servlet-name>RmEmployeeServlet</servlet-name>
+		<servlet-class>com.nicky.servlets.RmEmployeeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RmEmployeeServlet</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+
+
+
+</web-app>
