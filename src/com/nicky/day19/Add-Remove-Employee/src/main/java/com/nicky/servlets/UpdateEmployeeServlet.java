@@ -80,12 +80,12 @@ public class UpdateEmployeeServlet extends HttpServlet{
 					+ "</div>");
 			out.println("<div class=\"form-group form-inline\">\r\n"
 					+ "                <label for=\"\">Name</label>\r\n"
-					+ "                <input type=\"text\" name=\"employee-name\" id=\"employee-name\" class=\"form-control\" placeholder=\"Name\"\r\n"
+					+ "                <input type=\"text\" name=\"employee-name\" id=\"employee-name\" class=\"form-control\" value=\""+employee.getName()+"\"\r\n"
 					+ "                    aria-describedby=\"helpId\">\r\n"
 					+ "            </div>");
 			out.println("<div class=\"form-group form-inline\">\r\n"
 					+ "                <label for=\"\">Email</label>\r\n"
-					+ "                <input type=\"email\" name=\"employee-email\" id=\"employee-email\" style=\"width: 15rem;\" class=\"form-control\"\r\n"
+					+ "                <input type=\"email\" name=\"employee-email\" id=\"employee-email\" value=\""+employee.getEmail()+"\" style=\"width: 15rem;\" class=\"form-control\"\r\n"
 					+ "                    placeholder=\"abc@gmail.com\" aria-describedby=\"helpId\">\r\n"
 					+ "            </div>");
 			out.println(" <div class=\"form-check form-check-inline form-group \" >\r\n"
@@ -98,7 +98,7 @@ public class UpdateEmployeeServlet extends HttpServlet{
 					+ "                <div class=\"form-group form-inline\">\r\n"
 					+ "                    <label for=\"country\">Country</label>\r\n"
 					+ "                    <select class=\"custom-select scrollable-menu\" name=\"country\" id=\"country\">\r\n"
-					+ "                        <option selected>Select one</option>\r\n"
+					+ "                        <option selected>"+employee.getCountry()+"</option>\r\n"
 					+ "                        <option value=\"USA\">USA</option>\r\n"
 					+ "                        <option value=\"Japan\">Japan</option>\r\n"
 					+ "                        <option value=\"Korea\">Korea</option>\r\n"
