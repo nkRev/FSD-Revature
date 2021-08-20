@@ -137,7 +137,7 @@ public class GetAllEmployeeServlet extends HttpServlet {
 								+"<a href=editemployee?id="+e.getId()+">"+"Edit</a>"
 						+"</div>"
 						+"<div class=\"divTableCell\">"
-								+"<a href='/delete?id="+e.getId()+"'>"+"Delete</a>"
+								+"<a method='get' href='delete?id="+e.getId()+"'>"+"Delete</a>"
 						+"</div>"
 						);
 				out.println("</div>"); //closing div row

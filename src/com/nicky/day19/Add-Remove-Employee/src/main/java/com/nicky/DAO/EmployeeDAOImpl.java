@@ -61,6 +61,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		final String sql = "Delete from employees where id = ?";
 		ps = connection.prepareStatement(sql);
 		ps.setInt(1, id);
+		ps.executeUpdate();
 	}
 
 	@Override

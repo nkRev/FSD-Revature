@@ -84,10 +84,11 @@ public class UpdateConfServlet extends HttpServlet {
 			works = dao.updateEmployee(emp);
 			if (works) {
 				out.println("<h3>Employee Successfully updated!</h3>");
+				res.sendRedirect("getallemployees");
 			} else {
 				out.println("<h3>Employee was not updated</h3>");
-				out.println("redirecting to edit homepage");
-				req.getRequestDispatcher("/index.html").include(req, res);
+				out.println("redirecting to Employee List");
+				res.sendRedirect("getallemployees");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

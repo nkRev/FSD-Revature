@@ -95,11 +95,13 @@ public class ViewAnEmployeeServlet extends HttpServlet {
 				+ "        </div>\r\n"
 				+ "    </nav>\r\n"
 				+ "</div>");
-		// Get Employee
+		// Get Employee'
+		out.println("<div class=\"container\">");
 		out.println("<form method=\"post\" action=\"viewemployee\" class=\"form-inline\">\r\n"
 				+ "        <div class=\"form-group\">\r\n" + "            <label for=\"\">Employee ID </label>\r\n"
 				+ "            <input type=\"text\" name=\"id\" id=\"id\" class=\"form-control\" placeholder=\"\" aria-describedby=\"helpId\">\r\n"
 				+ "            <input type=\"submit\" value=\"Submit\">\r\n" + "        </div>\r\n" + "    </form>");
+		out.println("</div>");
 
 	}
 

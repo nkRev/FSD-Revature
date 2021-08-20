@@ -8,6 +8,7 @@ import com.nicky.DAO.EmployeeDAO;
 import com.nicky.DAO.EmployeeDaoConn;
 import com.nicky.model.Employee;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class AddEmployeeServlet extends HttpServlet {
 
 	// post http request
-	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		boolean itWorked = false;
 
 		// set content type
@@ -39,31 +40,29 @@ public class AddEmployeeServlet extends HttpServlet {
 		out.print("</head>");
 		out.print("<body>");
 		out.print("<div class=\"container\">\r\n"
-				+ "        <nav class=\"navbar navbar-expand-sm navbar-light bg-light\">\r\n"
-				+ "            <a class=\"navbar-brand\" href=\"index.html\">Employee System</a>\r\n"
-				+ "            <button class=\"navbar-toggler d-lg-none\" type=\"button\" data-toggle=\"collapse\"\r\n"
-				+ "                data-target=\"#collapsibleNavId\" aria-controls=\"collapsibleNavId\" aria-expanded=\"false\"\r\n"
-				+ "                aria-label=\"Toggle navigation\">\r\n"
-				+ "                <span class=\"navbar-toggler-icon\"></span>\r\n"
-				+ "            </button>\r\n"
-				+ "            <div class=\"collapse navbar-collapse\" id=\"collapsibleNavId\">\r\n"
-				+ "                <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n"
-				+ "                    <li class=\"nav-item active\">\r\n"
-				+ "                        <a class=\"nav-link\" href=\"index.html\">Home <span class=\"sr-only\">(current)</span></a>\r\n"
-				+ "                    </li>\r\n"
-				+ "                    <li class=\"nav-item\">\r\n"
-				+ "                        <a class=\"nav-link\" href=\"employee-info.html\">Employee info</a>\r\n"
-				+ "                    </li>\r\n"
-				+ "                    <li class=\"nav-item\">\r\n"
-				+ "                        <a class=\"nav-link\" href=\"#\">placeholder?</a>\r\n"
-				+ "                    </li>\r\n"
-				+ "                    <li class=\"nav-item\">\r\n"
-				+ "                        <a class=\"nav-link\" href=\"#\">Update Employee</a>\r\n"
-				+ "                    </li>\r\n"
-				+ "                </ul>\r\n"
-				+ "            </div>\r\n"
-				+ "        </nav>\r\n"
-				+ "    </div>");
+				+ "    <nav class=\"navbar navbar-expand-sm navbar-light bg-light\">\r\n"
+				+ "        <a class=\"navbar-brand\" href=\"index.html\">Employee System</a>\r\n"
+				+ "        <button class=\"navbar-toggler d-lg-none\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapsibleNavId\" aria-controls=\"collapsibleNavId\"\r\n"
+				+ "            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n"
+				+ "            <span class=\"navbar-toggler-icon\"></span>\r\n"
+				+ "        </button>\r\n"
+				+ "        <div class=\"collapse navbar-collapse\" id=\"collapsibleNavId\">\r\n"
+				+ "            <ul class=\"navbar-nav mr-auto mt-2 mt-lg-0\">\r\n"
+				+ "                <li class=\"nav-item active\">\r\n"
+				+ "                    <a class=\"nav-link\" href=\"index.html\">Home <span class=\"sr-only\">(current)</span></a>\r\n"
+				+ "                </li>\r\n"
+				+ "                <li class=\"nav-item\">\r\n"
+				+ "                    <a class=\"nav-link\" href=\"employee-info.html\">Add Employee</a>\r\n"
+				+ "                </li>\r\n"
+				+ "                <li class=\"nav-item\">\r\n"
+				+ "                    <a class=\"nav-link\" href=\"getallemployees\">Employee List</a>\r\n"
+				+ "                </li>\r\n"
+				+ "                <li class=\"nav-item\">\r\n"
+				+ "                    <a class=\"nav-link\" href=\"viewemployee\">View An Employee</a>\r\n"
+				+ "                </li>\r\n"
+				+ "            </ul>\r\n"
+				+ "        </div>\r\n"
+				+ "    </nav>");
 		
 		
 		/**
@@ -84,10 +83,9 @@ public class AddEmployeeServlet extends HttpServlet {
 		try {
 			itWorked = dao.addEmployee(emp);
 			if(itWorked) {
-				out.println("<h1>employee added</h1>");
+				res.sendRedirect("getallemployees");
 			}else {
 				out.println("<h1>employee was not added</h1>");
-				req.getRequestDispatcher("/employee-info.html");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

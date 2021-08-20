@@ -23,17 +23,21 @@ public class RmEmployeeServlet extends HttpServlet{
 		
 		//get id from urlrewrite
 		int id = Integer.parseInt(req.getParameter("id"));
+		
 		//get access to DAO
 		EmployeeDAO dao = EmployeeDaoConn.getEmployeeDAO();
+		
 		//rm employee
 		try {
 			dao.rmEmployee(id);
-			
+			res.sendRedirect("getallemployees");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 	}
+	
+
 	
 }
